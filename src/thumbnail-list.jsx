@@ -2,6 +2,7 @@
 var React = require('react');
 // when it's not a npm module a file path is required
 var Thumbnail = require('./thumbnail');
+var Dropdown = require('./dropdown');
 
 {/*  1.1) define class using the react method "createClass". createClass takes a 
 					configuration object that contains a render method that returns JSX.  */ }
@@ -13,10 +14,12 @@ module.exports = React.createClass({
 		var list = this.props.thumbnailData.map(function(thumbnailProps) {
 				// {...} syntax passes in the entire object
 				return <Thumbnail {...thumbnailProps} />
+
 		});
 
 		return <div>
 			{ list }
+			<Dropdown title='hello'/>
 		</div>
 	}
 })

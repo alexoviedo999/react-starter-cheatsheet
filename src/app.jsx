@@ -1,6 +1,8 @@
 	var React = require('react');
   var ThumbnailList = require('./thumbnail-list');
 
+  
+
   // 2.2) Create an options object. These options will be available in the render function as props.
 		var options = {
     thumbnailData:  [{
@@ -15,14 +17,33 @@
       header: 'Learn Gulp',
       description: 'Gulp will speed up your development workflow.  Gulp will speed up your development workflow.  Gulp will speed up your development workflow.',
       imageUrl: 'http://brunch.io/images/others/gulp.png'
-    }]
+    }],
+    title: 'Choose a dessert',
+    items: [
+      'Apple Pie',
+      'Peach Cobbler',
+      'Coconut Cream Pie'
+    ]
   };
+
+  // var options = {
+  //   title: 'Choose a dessert',
+  //   items: [
+  //     'Apple Pie',
+  //     'Peach Cobbler',
+  //     'Coconut Cream Pie'
+  //   ]
+  // }
+
+
 
 
 		// 1.2) create instance with 'createElement' and pass in the parent class.
 		// 2.3) pass in options to createElement.
 		var element = React.createElement(ThumbnailList, options);
+    // var element2 = React.createElement(Dropdown, options);
 
 		// 1.3) render element with the 'render' method and place in body tag. pass in 
 		// 			instace of class and location to be rendered.
 		React.render(element, document.querySelector('.container'));
+    // React.render(element2, document.querySelector('.container'));
